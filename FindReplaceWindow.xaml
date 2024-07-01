@@ -1,0 +1,38 @@
+﻿<Window x:Class="SimpleTextEditor.FindReplaceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleTextEditor"
+        mc:Ignorable="d"
+        Title="Find and Replace" Height="200" Width="400"
+        Background="#F8F8F8" FontFamily="Segoe UI">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Find Label and TextBox -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Find:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TextBoxFind" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+
+        <!-- Replace Label and TextBox -->
+        <Label Grid.Row="1" Grid.Column="0" Content="Replace:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TextBoxReplace" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Find Next" Margin="5" Padding="10,5" Click="FindNext_Click"/>
+            <Button Content="Replace" Margin="5" Padding="10,5" Click="Replace_Click"/>
+            <Button Content="Replace All" Margin="5" Padding="10,5" Click="ReplaceAll_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
